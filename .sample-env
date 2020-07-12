@@ -1,0 +1,5 @@
+PORT=5000
+TMDB_API_KEY=[Enter the TMDB API key here]
+REDIS_PORT=[Create a free cloud instance on redislabs.com and enter the endpoint port here]
+REDIS_HOST=[Create a free cloud instance on redislabs.com and enter the endpoint host here]
+REDIS_PASSWORD=[Enter the password of the redislabs DB instance here]
