@@ -14,3 +14,4 @@ app.listen(PORT, () => {
     console.log(`Movie trailer API is running on port ${PORT}`);
 });
 
+module.exports = app;

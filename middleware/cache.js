@@ -6,7 +6,7 @@ const redisClient = redis.createClient(
     process.env.REDIS_HOST,
     { no_ready_check: true } 
 );
-const EXPIRATION_TIME_IN_SECONDS = 60; // The lifetime of cached data before expiry
+const DATA_EXPIRATION_TIME_IN_SECONDS = process.env.DATA_EXPIRATION_TIME_IN_SECONDS; // The lifetime of cached data before expiry
 
 redisClient.auth(process.env.REDIS_PASSWORD, function (err) {
     if (err){
@@ -54,7 +54,7 @@ function getFromCache(req, res, next) {
  * @param {String}  trailerResultsJson    String representation of trailer results in JSON
  */
 function saveToCache(movieLink, trailerResultsJson) {
-    redisClient.setex(movieLink, EXPIRATION_TIME_IN_SECONDS, trailerResultsJson, function(err, result) {
+    redisClient.setex(movieLink, DATA_EXPIRATION_TIME_IN_SECONDS, trailerResultsJson, function(err, result) {
         if(err) {
             console.log(err);
         } else {
