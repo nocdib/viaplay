@@ -61,7 +61,7 @@ function formatTrailerLink(site, key) {
 }
 
 /**
- * Format the URL of the target video based on its site
+ * Validate that the URL is in a valid format with either HTTP or HTTPS protocols
  * @param {String}  movieLink     The Viaplay movie URL
  * @returns {Boolean} True or false depending on the validity of the URL
  */
