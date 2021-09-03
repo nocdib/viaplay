@@ -7,13 +7,13 @@ const redisClient = redis.createClient(
     { no_ready_check: true } 
 );
 const DATA_EXPIRATION_TIME_IN_SECONDS = process.env.DATA_EXPIRATION_TIME_IN_SECONDS; // The lifetime of cached data before expiry
-
+/*
 redisClient.auth(process.env.REDIS_PASSWORD, function (err) {
     if (err){
         console.log('Redis Connection Error: ' + err);
     }
 });
-
+*/
 redisClient.on('connect', function() {
     console.log('Connected to Redis\n');
 });
