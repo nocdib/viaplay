@@ -1,6 +1,5 @@
-PORT=5000
-TMDB_API_KEY=[Enter the TMDB API key here]
-REDIS_PORT=[Enter the Redis port here]
-REDIS_HOST=[Enter the Redis host here]
-REDIS_PASSWORD=[Enter the password for the Redis DB instance here]
-DATA_EXPIRATION_TIME_IN_SECONDS=60
+TMDB_API_KEY=[API key to for https://www.themoviedb.org/ ]
+PORT=[LOCALHOST port for the app to listen on. This must match the port value of the web service in docker-compose.yml]
+REDIS_PORT=[Defaul value is 6379. This must match the port value of the web service in docker-compose.yml]
+REDIS_HOST=host.docker.internal
+DATA_EXPIRATION_TIME_IN_SECONDS=[Length of time to cache data in Redis]

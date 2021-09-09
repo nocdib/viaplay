@@ -15,7 +15,7 @@ redisClient.auth(process.env.REDIS_PASSWORD, function (err) {
 });
 */
 redisClient.on('connect', function() {
-    console.log('Connected to Redis\n');
+    console.log(`Connected to Redis on port ${process.env.REDIS_PORT}`);
 });
 
 redisClient.on('error', function (err) {
