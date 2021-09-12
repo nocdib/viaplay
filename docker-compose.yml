@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+    web:
+        build: .
+        command: npm run start
+        volumes:
+            - .:/usr/app/
+            - /usr/app/node_modules
+        ports:
+            - "3000:3000"
+        depends_on:
+            - redis
+        env_file:
+            - web-variables.env
+    redis:
+        image: redis
+        volumes: 
+            - ./data:/data
+        ports: 
+            - 6379:6379
+
+        
