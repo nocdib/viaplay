@@ -33,7 +33,7 @@ Redis is used as a caching layer to minimize repeated calls to the Viaplay and T
 
 With the default settings the API endpoint will be http://localhost:3000/trailer/. Using an API testing tool like Postman or a browser with a network analysis console send a GET request to the endpoint with a query parameter key of **movieLink** and a value that is a valid Viaplay film URL. The following cases have been tested:
 - Positive test using working links: http://localhost:3000/trailer/?movieLink=https://content.viaplay.se/pc-se/film/jumanji-the-next-level-2019
-- No movieLink query (GET request to http://localhost:5000/trailer/)
+- No movieLink query (GET request to http://localhost:3000/trailer/)
 - Queries to invalid routes (anything that isn't **/trailer**)
 - Invalid movieLink format: content.viaplay.se/pc-se/film/fargo-1996
 - No result from movieLink query: http://content.viaplay.se/pc-se/film/fargo-3000
